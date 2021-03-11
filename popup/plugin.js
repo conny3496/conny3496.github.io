@@ -470,7 +470,7 @@ function fetchMBID(xml) {
 });
   //////////////////////////////// DO STUFF HERE //////////////////////////////////
   // document.querySelector(':root').style.setProperty('--main', 'var(--dark)')
-  // console.debug = function maskDebug(){};
+  console.debug = function maskDebug(){};
   var cmode = getCookie('cmode');
   lastSelectedColor = getCookie('cpicker');
   initialize();
