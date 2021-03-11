@@ -179,55 +179,6 @@
     }, 100);
   }
 
-  function getLive() {
-
-
-
-    //   seekBar.width(0);
-    //   audio.pause();
-    //   audio.currentTime = 0;
-    //   audio.play();
-    // //   trackTime.removeClass('active');
-    //   tProgress.text('00:00');
-    //   tTime.text('00:00');
-    //
-    //   currAlbum = albums[currIndex];
-    //   currTrackName = trackNames[currIndex];
-    //   currArtwork = albumArtworks[currIndex];
-    //
-    //   // audio.src = trackUrl[currIndex];
-    //
-    //
-      // nTime = 0;
-      // bTime = new Date();
-      // bTime = bTime.getTime();
-    //
-    //   if (flag != 0) {
-    //     audio.play();
-    //     playerTrack.addClass('active');
-    //     albumArt.addClass('active');
-    //
-        // clearInterval(buffInterval);
-        // checkBuffering();
-    //   }
-    //
-    //   albumName.text(currAlbum);
-    //   trackName.text(currTrackName);
-    //   albumArt.find('img.active').removeClass('active');
-    //   $('#' + currArtwork).addClass('active');
-    //
-    //   bgArtworkUrl = $('#' + currArtwork).attr('src');
-    //
-    //   bgArtwork.css({
-    //     'background-image': 'url(' + bgArtworkUrl + ')'
-    //   });
-    // } else {
-    //   if (flag == 0 || flag == 1)
-    //     --currIndex;
-    //   else
-    //     ++currIndex;
-    // }
-  }
 
   function initialize() {
     audio = new Audio();
@@ -423,9 +374,7 @@ function fetchXMLforMBID(trackTitle, trackArtist) {
   var thisTrackTitle = trackTitle.replaceAll(regEx,' ').replaceAll(' ','%20');
   var thisTrackArtist = trackArtist.replaceAll(regEx,' ').replaceAll(' ','%20');
   console.debug(thisTrackTitle)
-  // var queryURL = "http://musicbrainz.org/ws/2/release/?query=release:%22" + thisTrackTitle + "%22%20OR%20artist:%22" + thisTrackArtist + "%22";
-  // var queryURL = "http://musicbrainz.org/ws/2/release/?query=release:%22" + thisTrackTitle + "%22%20AND%20artist:%22" + thisTrackArtist + "%22";
-  var queryURL = "http://musicbrainz.org/ws/2/release/?query=title:" + thisTrackTitle + "%20AND%20artist:" + thisTrackArtist;
+  var queryURL = "https://musicbrainz.org/ws/2/release/?query=title:" + thisTrackTitle + "%20AND%20artist:" + thisTrackArtist;
   console.debug('queryURL: ' + queryURL);
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
